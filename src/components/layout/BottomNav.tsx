@@ -1,4 +1,4 @@
-import { BookOpen, CreditCard, Map } from "lucide-react";
+import { BookOpen, CreditCard, ExternalLink, Map } from "lucide-react";
 import { Link, useMatch } from "react-router-dom";
 import { cn } from "../../lib/utils";
 
@@ -6,16 +6,23 @@ export function BottomNav() {
   const onRoadmap = useMatch("/");
   const onFlashcards = useMatch("/flashcards");
   const onModule = useMatch("/module/*");
+  const onResources = useMatch("/resources");
 
   const tabs = [
     { to: "/", label: "Roadmap", icon: Map, active: !!onRoadmap },
+    { to: "/module/1", label: "Study", icon: BookOpen, active: !!onModule },
     {
       to: "/flashcards",
-      label: "Flashcards",
+      label: "Cards",
       icon: CreditCard,
       active: !!onFlashcards,
     },
-    { to: "/module/1", label: "Study", icon: BookOpen, active: !!onModule },
+    {
+      to: "/resources",
+      label: "Resources",
+      icon: ExternalLink,
+      active: !!onResources,
+    },
   ];
 
   return (
