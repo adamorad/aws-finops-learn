@@ -2,7 +2,6 @@ import { useEffect, useReducer } from "react";
 import { QUIZ_PASS_THRESHOLD, SRS_INITIAL_EASE } from "../lib/constants";
 import {
   initialModuleProgress,
-  initialState,
   readStorage,
   writeStorage,
 } from "../lib/storage";

@@ -624,7 +624,6 @@ export const module4: Module = {
     {
       id: "m4-q4",
       text: "A Kubernetes workload has `resources.requests.cpu: 2000m` set but consistently uses only 200m. What is the cost impact?",
-      back: "Inflated requests cause the scheduler to treat nodes as full before they are, leading to more nodes and higher cost.",
       options: [
         "No impact — Kubernetes charges only for actual CPU used",
         "Nodes appear full sooner, forcing new pod scheduling onto additional nodes, increasing cluster cost",
